@@ -23,6 +23,8 @@ document.querySelector('.check').addEventListener('click', function () {
     let currentscore = document.querySelector('.score').textContent;
     if (highScore < currentscore)
       document.querySelector('.highscore').textContent = currentscore;
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
   } else {
     if (document.querySelector('.score').textContent == 0) {
       document.querySelector('.message').textContent = 'Game Over 💢';
@@ -38,6 +40,7 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 document.querySelector('.again').addEventListener('click', function () {
+  document.querySelector('body').style.backgroundColor = '#222';
   document.querySelector('.guess').value = null;
   document.querySelector('.number').textContent = '?';
   document.querySelector('.score').textContent = 20;
