@@ -24,6 +24,10 @@ document.querySelector('.check').addEventListener('click', function () {
     if (highScore < currentscore)
       document.querySelector('.highscore').textContent = currentscore;
   } else {
+    if (document.querySelector('.score').textContent == 0) {
+      document.querySelector('.message').textContent = 'Game Over 💢';
+      return;
+    }
     document.querySelector('.score').textContent -= 1;
     if (input < unknownNo) {
       document.querySelector('.message').textContent = 'Too Low 😢';
